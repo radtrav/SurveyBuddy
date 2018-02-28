@@ -7,4 +7,4 @@ const recipientSchema = new Schema({
 
 });
 
-modules.exports = recipientSchema;
+module.exports = recipientSchema;
