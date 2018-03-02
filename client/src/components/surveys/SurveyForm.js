@@ -31,7 +31,7 @@ class SurveyForm extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.props.handleSubmit(values => console.log(values))}>
+        <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
           {this.renderFields()}
           <Link to="/surveys" className="red btn-flat left white-text" type="submit">
             Cancel
@@ -49,8 +49,7 @@ class SurveyForm extends Component {
 const validate = (values) => {
   const errors = {};
 
-
-  errors.emails = validateEmails(values.emails);
+  errors.emails = validateEmails(values.emails || '');
 
   FIELDS.forEach(({ name }) => {
     if(!values[name]) {
