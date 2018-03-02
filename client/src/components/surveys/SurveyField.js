@@ -1,12 +1,14 @@
 import React from 'react';
 
-const SurveyField = ({ input }) => {
-  console.log('input', input)
+const SurveyField = ({ input, label, meta: { error, touched } }) => {
   return (
     <div>
-      <input {...input} />
+      <label htmlFor="surveyTitle"> {label}</label>
+      <input style={{ marginBottom: 5 }} {...input} />
+      <div className="red-text" style={{ marginBottom: 20 }}>
+        {touched && error}
+      </div>
     </div>
-
   );
 };
 
