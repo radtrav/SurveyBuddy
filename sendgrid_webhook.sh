@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 function localtunnel {
-  echo "localtunnel start?"
-  lt -s etnethbtctothemooooon --port 5000
+  echo "restarting localtunnel ..."
+  lt --port 5000 --subdomain etnethbtctothemooooonxyz
 }
 until localtunnel; do
 echo "localtunnel server crashed"
