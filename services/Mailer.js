@@ -41,18 +41,14 @@ class Mailer extends helper.Mail {
   }
 
   async send() {
-    console.log('ok')
     const request = this.sgApi.emptyRequest({
       method: 'POST',
       path: '/v3/mail/send',
       body: this.toJSON()
     });
-    console.log('ok2')
 
     try {
-      console.log('this.recipients',  this.recipients);
       const response = await this.sgApi.API(request);
-      console.log('ok3')
       return response;
     } catch (err) {
       console.log('err', err.response.body.errors);
