@@ -3,6 +3,19 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Payments from './Payments';
 
+const styles = {
+  navWrapper: {
+    height: 80,
+    paddingLeft: 40,
+    paddingRight: 40,
+    paddingTop: 5,
+  },
+  icon: {
+    color: 'teal',
+    fontSize: 56,
+  }
+};
+
 class Header extends Component {
   renderContent() {
     switch (this.props.auth) {
@@ -23,7 +36,7 @@ class Header extends Component {
             <div>Credits: {this.props.auth.credits}</div>
           </li>,
           <li key="2">
-            <a href="/api/logout">Logout</a>{' '}
+            <a href="/api/logout">Logout</a>
           </li>,
         ];
     }
@@ -32,16 +45,19 @@ class Header extends Component {
   render() {
     return (
       <nav>
-        <div className="nav-wrapper">
-          <Link
-            to={this.props.auth ? '/surveys' : '/'}
-            className="left brand-logo"
-          >
-            Emaily
-          </Link>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-            {this.renderContent()}
-          </ul>
+        <div style={styles.navWrapper} className="nav-wrapper black">
+          <div>
+            <Link
+              to={this.props.auth ? '/surveys' : '/'}
+              className="left brand-logo"
+            >
+              <i className="material-icons teal-text" style={styles.icon}>assessment</i>
+              SurveyBuddy
+            </Link>
+            <ul id="nav-mobile" className="right hide-on-med-and-down">
+              {this.renderContent()}
+            </ul>
+          </div>
         </div>
       </nav>
     );

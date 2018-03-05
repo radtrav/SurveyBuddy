@@ -13,7 +13,6 @@ import {
   FETCH_SURVEYS_SUCCESS,
   FETCH_SURVEYS_FAILURE,
 } from './types';
-import { FETCH_SURVEYS } from './types';
 
 export const fetchUser = () => async dispatch => {
   try {
