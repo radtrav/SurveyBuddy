@@ -1,9 +1,8 @@
-import { FETCH_SURVEYS } from '../actions/types';
+import { FETCH_SURVEYS_SUCCESS } from '../actions/types';
 
 export default function(state = [], action) {
-  console.log('action', action);
   switch (action.type) {
-    case FETCH_SURVEYS:
+    case FETCH_SURVEYS_SUCCESS:
       return action.payload;
     default:
       return state;
