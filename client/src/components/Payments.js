@@ -18,6 +18,7 @@ class Payments extends Component {
         stripeKey={process.env.REACT_APP_STRIPE_KEY}
         // stripeKey={process.env.STRIPE_PUBLISHABLE_KEY}
       >
+        {console.log('process.env', process.env)}
         <button className="btn"> Add Credits </button>
       </StripeCheckout>
     );
