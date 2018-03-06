@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PieChart from 'react-minimal-pie-chart';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { fetchSurveys } from '../../actions';
 
@@ -10,13 +11,22 @@ class SurveyList extends Component {
     this.props.fetchSurveys();
   }
   renderSurveys() {
+    if (!this.props.surveys.length) {
+      return (
+        <div className="center">
+          <div style={{ marginBottom: 20 }}>No surveys to view!</div>
+          <Link
+            className="btn-large waves-effect waves-light teal"
+            to="/surveys/new"
+          >
+            Make a new Survey
+          </Link>
+        </div>
+      );
+    }
     return this.props.surveys.reverse().map(survey => {
       return (
-        <div
-          style={{ padding: 0 }}
-          key={survey._id}
-          className="card darken- 1"
-        >
+        <div style={{ padding: 0 }} key={survey._id} className="card darken- 1">
           <div className="row">
             <div className="col s4">
               <PieChart

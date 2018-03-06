@@ -29,14 +29,23 @@ class Header extends Component {
         );
       default:
         return [
-          <li key="1">
-            <Payments />
+          <li key="4">
+            <a href="/">Home</a>
+          </li>,
+          <li key="5">
+            <a href="/surveys">Surveys</a>
+          </li>,
+          <li key="5">
+            <a href="/surveys/new">New</a>
+          </li>,
+          <li key="2">
+            <a href="/api/logout">Logout</a>
           </li>,
           <li key="3" style={{ margin: '0 10px' }}>
             <div>Credits: {this.props.auth.credits}</div>
           </li>,
-          <li key="2">
-            <a href="/api/logout">Logout</a>
+          <li key="1">
+            <Payments />
           </li>,
         ];
     }
@@ -48,7 +57,7 @@ class Header extends Component {
         <div style={styles.navWrapper} className="nav-wrapper black">
           <div>
             <Link
-              to={this.props.auth ? '/surveys' : '/'}
+              to={this.props.auth ? '/' : '/'}
               className="left brand-logo"
             >
               <i className="material-icons teal-text" style={styles.icon}>assessment</i>
