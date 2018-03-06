@@ -1,4 +1,4 @@
-# Product Name
+# SurveyBuddy
 > SurveyBuddy makes simple surveys... simple!
 
 ![Front page](https://raw.githubusercontent.com/radtrav/SurveyBuddy/master/screenshots/my_surveys.png)
