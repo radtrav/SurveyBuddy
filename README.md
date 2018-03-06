@@ -1,7 +1,9 @@
 # Product Name
 > SurveyBuddy makes simple surveys... simple!
 
-This application allows you to create yes or no surveys and email them to a list of users. The users can click yes or no in response to the survey question. The responses will be collected and can be viewd from the application dashboard. 
+![Front page](https://raw.githubusercontent.com/radtrav/SurveyBuddy/master/screenshots/my_surveys.png)
+
+This application allows you to create yes or no surveys and email them to a list of users. The users can click yes or no in response to the survey question. The responses are collected via a web hook and the results can be viewed from the application dashboard. 
 
 ## This project was built with
 * Express.js
@@ -11,7 +13,6 @@ This application allows you to create yes or no surveys and email them to a list
 * Redux
 * SendGrid API
 * Stripe API
-
 
 ![](header.png)
 
