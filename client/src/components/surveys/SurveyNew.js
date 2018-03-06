@@ -23,7 +23,12 @@ class SurveyNew extends Component {
   };
 
   render() {
-    return <div>{this.renderContent()}</div>;
+    return (<div style={{ marginTop: 45 }}>
+      <div className="center" style={{fontSize: 40, marginBottom: 20, marginTop:20, fontWeight: 600}}> Create a New Survey</div>
+      <hr/>
+      <br />
+      {this.renderContent()}
+    </div>);
   }
 }
 

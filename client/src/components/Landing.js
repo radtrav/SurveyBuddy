@@ -33,7 +33,7 @@ const Landing = () => {
             <Link
               style={styles.buttons}
               className="btn-large waves-effect waves-light teal"
-              to="/surveys/"
+              to="/surveys/new"
             >
               Make a new Survey
             </Link>

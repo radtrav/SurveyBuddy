@@ -44,7 +44,7 @@ class Header extends Component {
 
   render() {
     return (
-      <nav>
+      <nav className="navbar-fixed">
         <div style={styles.navWrapper} className="nav-wrapper black">
           <div>
             <Link
